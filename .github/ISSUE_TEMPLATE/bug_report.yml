@@ -1,0 +1,67 @@
+name: Bug report
+description: Something does not work as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **A way to blind, crash, bypass or subvert the agent is a security report, not a bug.**
+        Do not file it here: follow [SECURITY.md](https://github.com/synthaea-lab/.github/blob/main/SECURITY.md).
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Agent (sensors, detection, response, transport, packaging)
+        - Control plane (server)
+        - ML pipeline or models
+        - Detection content (Sigma, YARA, IOC)
+        - Attack scenarios
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release or commit of the affected component.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: OS, OS build or kernel version, and architecture.
+      placeholder: Ubuntu 24.04, kernel 6.8, x86_64
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed, including errors.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant log output. Remove secrets, hostnames and personal data first.
+      render: text
