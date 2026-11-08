@@ -1,0 +1,43 @@
+name: Feature request
+description: Propose a capability, or challenge a design decision.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A well-argued objection to a design decision is welcome here too: engage with the recorded
+        reasoning and say what your alternative costs. Offensive tooling whose only use is against
+        defenders is out of scope.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Agent (sensors, detection, response, transport, packaging)
+        - Control plane (server)
+        - ML pipeline or models
+        - Detection content (Sigma, YARA, IOC)
+        - Attack scenarios
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What you are trying to do, and why the current behavior falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What you would like to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and costs
+      description: Other options you considered, and what each one costs (performance, migration, maintenance).
