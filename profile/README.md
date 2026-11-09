@@ -19,7 +19,7 @@ your fleet. There is no Synthaea cloud, and the agent sends no telemetry to the 
 | [agent](https://github.com/synthaea-lab/agent) | The endpoint agent, in Rust: sensors, detection engines, correlator, response, transport and packaging |
 | [server](https://github.com/synthaea-lab/server) | The self-hosted control plane: Next.js and PostgreSQL |
 | [ml](https://github.com/synthaea-lab/ml) | The ML pipeline: datasets, training, calibration, evaluation and the model registry |
-| [rules](https://github.com/synthaea-lab/rules) | Detection content: Sigma and YARA rules, each with the samples it must match |
+| [rules](https://github.com/synthaea-lab/rules) | Detection content: Sigma and YARA rules, each tested against a sample it must match |
 | [scenarios](https://github.com/synthaea-lab/scenarios) | Benign attack scenarios and the detections each one must trigger |
 | [rig](https://github.com/synthaea-lab/rig) | The test rig: a machine catalog, Vagrant harnesses and a runner that reports expected versus detected |
 
@@ -27,7 +27,8 @@ your fleet. There is no Synthaea cloud, and the agent sends no telemetry to the 
 
 - [Documentation](https://synthaea.com/en/docs): architecture, installation, configuration and
   the control plane
-- [Download](https://synthaea.com/en/download): pre-release packages with checksums
+- [Download](https://synthaea.com/en/download): build from source today; pre-release packages
+  with checksums once the first one is published
 - [Progress](https://synthaea.com/en/progress): current status and recent activity
 
 ## Contributing
